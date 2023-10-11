@@ -1,0 +1,63 @@
+version: '3.5'
+
+networks:
+  app-network:
+    name: app-network
+    driver: bridge
+
+services:
+  mariadb:
+    container_name: mariadb
+    build: ./requirements/mariadb
+    env_file:
+      - .env
+    volumes:
+      - database:/var/lib/mysql
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  wordpress:
+    container_name: wordpress
+    build: ./requirements/wordpress
+    env_file:
+      - .env
+    depends_on:
+      - mariadb
+    volumes:
+      - wordpress_data:/var/www/html
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  nginx:
+    container_name: nginx
+    build: ./requirements/nginx
+    ports:
+      - 443:443
+    depends_on:
+      - wordpress
+    volumes:
+      - wordpress_data:/var/www/html
+    restart: unless-stopped
+    networks:
+      - app-network
+
+volumes:
+  wordpress_data:
+    driver: local
+    name: wordpress_data
+    driver_opts:
+      type: none
+      device: /home/mpizzolo/data/wordpress
+      o: bind
+  database:
+    driver: local
+    name: database
+    driver_opts:
+      type: none
+      device: /home/mpizzolo/data/mariadb
+      o: bind
+    
+
+
