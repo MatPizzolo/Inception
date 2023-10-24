@@ -1,0 +1,23 @@
+# Excluimos archivos y directorios relacionados con el sistema
+/proc/
+/sys/
+/dev/
+/tmp/
+/run/
+/boot/
+/lib/modules/
+/media/
+/mnt/
+/etc/fstab
+/etc/hostname
+/etc/hosts
+/etc/network/
+/etc/resolv.conf
+
+# Excluimos archivos y directorios específicos del contenedor de WordPress
+# /conf/
+# /tools/
+# /wordpress_start.sh
+
+# # Excluimos archivos de configuración de PHP
+# /etc/php/

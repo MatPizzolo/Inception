@@ -1,0 +1,19 @@
+# Excluimos archivos y directorios relacionados con el sistema
+/proc/
+/sys/
+/dev/
+/tmp/
+/run/
+/boot/
+/lib/modules/
+/media/
+/mnt/
+/etc/fstab
+/etc/hostname
+/etc/hosts
+/etc/network/
+/etc/resolv.conf
+
+# Excluimos archivos y directorios específicos de la imagen de Nginx
+# /ssl/
+# /conf/
