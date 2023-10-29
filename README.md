@@ -1,6 +1,6 @@
 # `Inception`
 
-This repository contains a compact infrastructure built on Docker and Docker-Compose, encompassing a robust LEMP Stack (Nginx, MariaDB, PHP) configuration to efficiently deploy WordPress. The setup adheres to specific guidelines, offering a hands-on approach to system administration through Docker utilization.
+A compact infrastructure built on Docker and Docker-Compose, encompassing a robust LEMP Stack (Nginx, MariaDB, PHP) configuration to efficiently deploy WordPress. The setup adheres to specific guidelines, offering a hands-on approach to system administration through Docker utilization.
 
 [Subject](img/en.subject.pdf)
 
