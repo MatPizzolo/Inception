@@ -1,3 +1,5 @@
+[![eng](img/eng.png)](README.md) [![ru](img/es.png)](README.es.md)
+
 # `Inception`
 
 A Dockerized Modular System Managed by Docker-Compose, encompassing a robust LEMP Stack (Nginx, MariaDB, PHP) configuration to efficiently deploy WordPress. The setup adheres to specific guidelines, offering a hands-on approach to system administration through Docker utilization.
