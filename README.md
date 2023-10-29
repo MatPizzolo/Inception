@@ -1,4 +1,4 @@
-[![eng](img/eng.png)](README.md) [![ru](img/es.png)](README.es.md)
+[![es](img/es.png)](README.es.md)
 
 # `Inception`
 
