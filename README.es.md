@@ -1,8 +1,8 @@
 # `Inception`
 
-A Dockerized Modular System Managed by Docker-Compose, encompassing a robust LEMP Stack (Nginx, MariaDB, PHP) configuration to efficiently deploy WordPress. The setup adheres to specific guidelines, offering a hands-on approach to system administration through Docker utilization.
+Un Sistema Modular Dockerizado gestionado por Docker-Compose, que abarca una configuración sólida de la pila LEMP (Nginx, MariaDB, PHP) para implementar eficientemente WordPress. La configuración sigue pautas específicas, ofreciendo un enfoque práctico para la administración del sistema a través del uso de Docker.
 
-[Subject](img/en.subject.pdf)
+[Tema](img/es.subject.pdf)
 
 
 <p align="center">
@@ -15,29 +15,29 @@ A Dockerized Modular System Managed by Docker-Compose, encompassing a robust LEM
 <p align="center">
     <img src="img/basic.png">
 </p>
+## Componentes del Proyecto:
+- **Contenedor NGINX con Soporte TLS:**
+  - Contenedor Docker configurado exclusivamente para admitir TLSv1.2 o TLSv1.3.
 
-## Project Components:
-- **NGINX Container with TLS Support:**
-  - Docker container exclusively configured to support TLSv1.2 or TLSv1.3.
+- **Contenedores de WordPress y MariaDB:**
+  - Contenedores Docker separados para WordPress con php-fpm y MariaDB, excluyendo Nginx.
 
-- **WordPress and MariaDB Containers:**
-  - Separate Docker containers for WordPress with php-fpm and MariaDB, excluding Nginx.
+- **Configuración de Volumen:**
+  - Asignación de volúmenes para la base de datos de WordPress y los archivos del sitio web.
 
-- **Volume Configuration:**
-  - Allocation of volumes for the WordPress database and website files.
+- **Redes:**
+  - Establecimiento de una red Docker dedicada que facilita la comunicación entre contenedores.
 
-- **Networking:**
-  - Establishment of a dedicated Docker network facilitating communication between containers.
+- **Mecanismo de Reinicio Automático:**
+  - Reinicios automáticos de contenedores en caso de un fallo para mantener la operatividad del sistema.
 
-- **Auto-Restart Mechanism:**
-  - Automated container restarts in case of a crash for sustained system uptime.
+- **Configuración de Usuario de la Base de Datos:**
+  - Creación de dos usuarios en la base de datos de WordPress, con criterios estrictos para el nombre de usuario del administrador.
 
-- **Database User Configuration:**
-  - Creation of two users in the WordPress database, with stringent criteria for the administrator's username.
+- **Asignación de Volumen a la Máquina Anfitriona:**
+  - Volúmenes asignados al directorio `/home/login/data` en la máquina anfitriona para un acceso sin problemas.
 
-- **Volume Mapping to Host Machine:**
-  - Volumes mapped to the `/home/login/data` directory on the host machine for seamless access.
-
-- **Domain Configuration:**
-  - Custom domain setup (`login.42.fr`) directing to the local IP address for improved accessibility.
+- **Configuración de Dominio:**
+  - Configuración personalizada de dominio (`login.42.fr`) direccionado a la dirección IP local para mejorar la accesibilidad.
 ---
+
